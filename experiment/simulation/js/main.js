@@ -1,26 +1,14 @@
+"use strict";
+
 import { graphData, datas } from "./data.js";
 
-let molecule = null;
-let width = window.innerWidth;
-let movie = new ChemDoodle.MovieCanvas3D("movie", width, 500);
+const width = window.innerWidth;
+const movie = new ChemDoodle.MovieCanvas3D("movie", width, 400);
 
 const setMolecule = (data) => {
-  // if (molecule) {
-  //   // var canvas = document.getElementById("movie");
-  //   // var context = canvas.getContext("3d");
-  //   // context.clearRect(0, 0, canvas.width, canvas.height);
-  //   molecule.clear();
-  //   console.log(molecule.frames);
-  // }
-  // console.log(data);
-  // let width = 600;
-  // if (window.innerWidth < 900) {
-  //   width = window.innerWidth;
-  // }
   movie.clear();
   movie.frames = [];
-  let width = window.innerWidth;
-  if (data != null) {
+  if (data !== null) {
     data.forEach((geometry) =>
       movie.addFrame([ChemDoodle.readXYZ(geometry)], [])
     );
@@ -99,50 +87,6 @@ let XYZData = [];
 
 const truncateFloat = (num) => Math.round(num * 1000000) / 1000000;
 
-// const generateXYZData = () => {
-//   const frames = 30;
-//   datas.frequencies.forEach((item, ind) => {
-//     let geometry = [];
-//     let prep = {};
-//     item.displacement.forEach((disp) => {
-//       const absX = Math.abs(disp.x - datas.positions[disp.atom - 1].x);
-//       const absY = Math.abs(disp.y - datas.positions[disp.atom - 1].y);
-//       const absZ = Math.abs(disp.z - datas.positions[disp.atom - 1].z);
-//       prep[disp.atom - 1] = {
-//         x: {
-//           min: datas.positions[disp.atom - 1].x - absX,
-//           max: datas.positions[disp.atom - 1].x + absX,
-//           step: absX / frames,
-//         },
-//         y: {
-//           min: datas.positions[disp.atom - 1].y - absY,
-//           max: datas.positions[disp.atom - 1].y + absY,
-//           step: absY / frames,
-//         },
-//         z: {
-//           min: datas.positions[disp.atom - 1].z - absZ,
-//           max: datas.positions[disp.atom - 1].z + absZ,
-//           step: absZ / frames,
-//         },
-//       };
-//     });
-
-//     for (let i = 0; i <= frames; i++) {
-//       let str = `${datas.positions.length}\n `;
-//       for (let j = 0; j < datas.positions.length; j++) {
-//         str += `\n${datas.positions[j].element}   ${truncateFloat(
-//           prep[j].x.min + prep[j].x.step * i
-//         )}  ${truncateFloat(
-//           prep[j].y.min + prep[j].y.step * i
-//         )}  ${truncateFloat(prep[j].z.min + prep[j].z.step * i)}`;
-//       }
-//       geometry.push(str);
-//     }
-
-//     XYZData[ind] = { freq: item.freq, geometry: geometry };
-//   });
-// };
-
 const generateXYZData = () => {
   const frames = 30;
   datas.frequencies.forEach((item, ind) => {
@@ -187,7 +131,7 @@ const generateXYZData = () => {
 generateXYZData();
 
 const setFreq = (frequencyIndex) => {
-  molecule = setMolecule(XYZData[frequencyIndex].geometry);
+  setMolecule(XYZData[frequencyIndex].geometry);
   highlightChart(XYZData[frequencyIndex].freq);
 };
 
