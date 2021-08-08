@@ -1,18 +1,75 @@
-[
-{"question":"This is a Sample Question 1?",
-"answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
-          },
-"correctAnswer":"a"},
-{"question":"This is a Sample Question 2?",
-"answers":{
-            "a":"answer1",
-            "b":"answer2",
-            "c":"answer3",
-            "d":"answer4"
-          },
-"correctAnswer":"c"} 
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which one of the following exhibits pure vibrational spectra?",
+      "answers": {
+        "a": "H<sub>2</sub>",
+        "b": "CO<sub>2</sub>",
+        "c": "H<sub>2</sub>O",
+        "d": "CO"
+      },
+      "explanations": {
+        "b": "Only those molecules which do not possess permanent dipole moment but the dipole moment changes during the stretching modes will be pure rotational active. Only CO<sub>2</sub> qualifies for this."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What can you say about the IR and Raman activity of the normal modes CO<sub>2</sub>?",
+      "answers": {
+        "a": "They will be both IR and Raman active",
+        "b": "They will be both IR and Raman inactive",
+        "c": "Its IR active modes will be Raman inactive",
+        "d": "IR active modes will be Raman active but not vice versa"
+      },
+      "explanations": {
+        "c": "For molecules containing a center of symmetry, IR active modes are Raman inactive and vice versa."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following modes of CO<sub>2</sub> will be Raman active?",
+      "answers": {
+        "a": "In-plane Bending mode",
+        "b": "Out-of-plane Bending mode",
+        "c": "Symmetric stretch",
+        "d": "Asymmetric stretch"
+      },
+      "explanations": {
+        "c": "CO<sub>2</sub> is known to follow the role of mutual exclusion, i.e. IR active modes are Raman inactive and vice versa. Only those modes which produces a change in dipole moment will be IR active. Symmetric stretch does not produce any change in the dipole moment and hence will be IR inactive and Raman active."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "The frequency of UV radiation is greater than:",
+      "answers": {
+        "a": "Microwaves",
+        "b": "IR radiation",
+        "c": "Both (a) and (b)",
+        "d": "None of these"
+      },
+      "explanations": {
+        "c": "The frequency of UV radiation is greater then IR radiation which is higher than that of Microwaves. The frequency of UV is of the order 10<sup>16</sup> while that of IR is 10<sup>14</sup>-10<sup>12</sup> and microwaves is 10<sup>10</sup>"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is true for CO2?",
+      "answers": {
+        "a": "Symmetric stretch has higher frequency than asymmetric stretch",
+        "b": "Symmetric stretch has lower frequency than asymmetric stretch",
+        "c": "Bending mode has higher frequency than asymmetric mode",
+        "d": "Bending mode has higher frequency than symmetric mode"
+      },
+      "explanations": {
+        "b": "The symmetric stretch is an easier deformation than the asymmetric stretch so the asymmetric stretch occurs at a higher wavenumber. The bending vibration is much easier than stretching so this occurs at a much lower wavenumber."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    }
+  ]
+}
