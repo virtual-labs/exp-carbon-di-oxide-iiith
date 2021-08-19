@@ -1,6 +1,6 @@
 The vibrational transitions of a diatomic molecule in its electronic ground state can be approximated to a Simple Harmonic Oscillator (SHM). The rotational transitions can be approximated to a rigid rotor.
 
-In this lab, please distinguish between ν(spelled 'nu') and v(alphabet 'v'). While the ν is used to denote the frequency, the symbol v is used to denote the vibrational quantum number.
+In this lab, please distinguish between ν(spelled 'nu') and v(alphabet 'v'). While the ν is used to denote the frequency, the symbol v denotes the vibrational quantum number.
 
 ### Selection
 
@@ -35,7 +35,7 @@ Where meff (reduced mass) is given by
 <center>
 meff=m1m2m1+m2
 </center>
-Ev is permitted energy levels. The value of ω is obtained from the IR spectra. Substituting the value of meff we get the bond force constant.
+Ev is permitted energy levels. The value of ω is obtained from the IR spectra. Substituting the value of meff, we get the bond force constant.
 
 ### Calculation of Bond length
 
@@ -56,4 +56,4 @@ where meff is the reduced mass. The separation between the two illustrated vibra
 <center>
 2ΔEJ=ℏω
 </center>
-The value of ω is obtained from the IR spectra. We get the moment of inertia from the above equations and substituting meff in the moment of inertia equation, we get the bond length.
+The value of ω is obtained from the IR spectra. We get the moment of inertia from the above equations, and upon substituting meff in the moment of inertia equation, we get the bond length.
