@@ -1,1 +1,1 @@
-## Vib-rotational Spectroscopy of Carbon Di Oxide
+## Vib-rotational Spectroscopy of Carbon dioxide
