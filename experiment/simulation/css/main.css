@@ -1,1 +1,22 @@
-/* You CSS goes in here */
+.title {
+  text-align: center;
+}
+
+.v-button-set {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.v-button-set .v-button {
+  margin: 0.5em;
+  background-color: #a9a9a9;
+}
+
+.v-button-set .v-active {
+  background-color: #288ec8;
+}
+
+.v-button-set .v-button:hover {
+  background-color: #4187af;
+}
