@@ -11,26 +11,9 @@
   </head>
   <body>
     <!-- Your code goes here-->
-    <div class="v-details-container v-margin-bottom">
-      <div class="v-detail-title">
-        <div>Instructions</div>
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Choose a frequency from the options.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Note down the corresponding energy from the graph.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Observe the molecular movement for the selected frequency.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Rotate the molecule to see the movement from the forward direction.
-      </div>
-      <div class="v-detail-row left-on-mobile">
-        Note that the bond between atoms exists during the movement, but is not
-        being displayed due to limitations of the simulator.
-      </div>
+    <div class="v-details-container v-margin-bottom v-floating-details">
+      <div class="v-detail-title">Instructions</div>
+      <div class="v-detail-row left-on-mobile" id="instructions"></div>
     </div>
     <div class="center-content">
       <canvas id="movie" alt="ChemDoodle Web Component">
@@ -39,7 +22,7 @@
     </div>
     <div class="columns">
       <div class="column center-content">
-        <div class="v-button-set button-container">
+        <div class="v-button-set button-container" id="frequency-container">
           <button class="v-button v-active">Frequency: 639.9905 (I)</button>
           <button class="v-button">Frequency: 639.9905 (II)</button>
           <button class="v-button">Frequency: 1372.0764</button>
@@ -47,7 +30,10 @@
         </div>
       </div>
       <div class="column center-content">
-        <canvas id="myChart" style="width: 100%; max-width: 700px"></canvas>
+        <canvas
+          id="myChart"
+          style="width: 100%; max-width: 700px; max-height: 300px"
+        ></canvas>
       </div>
     </div>
 
