@@ -1,9 +1,40 @@
 "use strict";
 
-import { graphData, datas } from "./data.js";
+import { graphData, datas, instructions } from "./data.js";
+
+let currentInstructionIndex = -1;
+let sleepTime = 3500;
+
+const setInstruction = (index) => {
+  if (index < instructions.length && currentInstructionIndex < index) {
+    currentInstructionIndex = index;
+    document.getElementById("instructions").innerHTML =
+      instructions[currentInstructionIndex].message;
+
+    instructions[currentInstructionIndex].elementId.forEach((id, ind) => {
+      if (ind === 0)
+        document.getElementById(id).scrollIntoView({
+          behavior: "smooth",
+        });
+      document.getElementById(id).classList.add("highlight");
+    });
+    sleep(sleepTime - 600).then(() =>
+      instructions[currentInstructionIndex].elementId.forEach((id) =>
+        document.getElementById(id).classList.remove("highlight")
+      )
+    );
+  }
+};
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const setMultipleInstructions = (indexes) =>
+  indexes.forEach((val, ind) =>
+    sleep(sleepTime * ind).then(() => setInstruction(val))
+  );
 
 const width = window.innerWidth;
-const movie = new ChemDoodle.MovieCanvas3D("movie", width, 400);
+const movie = new ChemDoodle.MovieCanvas3D("movie", width, 300);
 
 const setMolecule = (data) => {
   movie.clear();
@@ -82,6 +113,7 @@ const highlightChart = (angle) => {
 
 // init
 const chart = initChart();
+setInstruction(0);
 
 let XYZData = [];
 
@@ -139,6 +171,8 @@ setFreq(0);
 
 document.querySelectorAll(".v-button-set .v-button").forEach((button, ind) => {
   button.addEventListener("click", () => {
+    setMultipleInstructions([1, 2, 3, 4]);
+
     document
       .querySelectorAll(".v-button-set .v-active")
       .forEach((activeButton) => activeButton.classList.remove("v-active"));

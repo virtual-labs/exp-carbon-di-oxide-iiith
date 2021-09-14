@@ -170,3 +170,27 @@ export const datas = {
     },
   ],
 };
+
+export const instructions = [
+  {
+    message: "Select a frequency",
+    elementId: ["frequency-container"],
+  },
+  {
+    message: "Observe the energy, for this frequency, in the graph",
+    elementId: ["myChart"],
+  },
+  {
+    message: "Observe the molecular movement for this frequency",
+    elementId: ["movie"],
+  },
+  {
+    message: "Rotate the molecule and see its movement from forward direction.",
+    elementId: ["movie"],
+  },
+  {
+    message:
+      "Note that the bond between atoms exists during the movement, but is not being displayed due to limitations of the simulator",
+    elementId: ["movie"],
+  },
+];
