@@ -1,0 +1,75 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "How many normal modes of vibration will CO<sub>2</sub> have?",
+      "answers": {
+        "a": "3",
+        "b": "4",
+        "c": "5",
+        "d": "2"
+      },
+      "explanations": {
+        "b": "Number of normal modes are given by 3N-5 for linear molecules and 3N-6 for non linear molecules where N is the number of atoms."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "How many vibrational normal modes are present in benzene?",
+      "answers": {
+        "a": "12",
+        "b": "20",
+        "c": "30",
+        "d": "24"
+      },
+      "explanations": {
+        "c": "Benzene has 12 atoms and is non-linear, hence 3N-6 gives 30."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The vibrational rotational spectrum is observed in …………… region.",
+      "answers": {
+        "a": "Near infrared",
+        "b": "Microwave region",
+        "c": "Visible region",
+        "d": "Radio frequency region"
+      },
+      "explanations": {
+        "a": "Vibrational rotational transition occurs in the near IR region of the spectrum"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "The increase in vibrational energy leads to absorption spectrum in:",
+      "answers": {
+        "a": "IR region",
+        "b": "Visible region",
+        "c": "Microwave region",
+        "d": "UV region"
+      },
+      "explanations": {
+        "a": "Even though the energy of the vibrational energy levels are increased they are quantized and any transition among the vibrational levels will still occur in the IR region."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Which of the following is a criteria for a molecule to be IR active?",
+      "answers": {
+        "a": "Permanent dipole moment",
+        "b": "Change in dipole moment in stretching modes",
+        "c": "Polarisability",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "b": "Change in dipole moment during the vibrational stretch causes the molecule to interact with the incoming radiation and hence be IR active"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    }
+  ]
+}

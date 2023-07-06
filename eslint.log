@@ -1,0 +1,8 @@
+
+/home/runner/work/exp-carbon-di-oxide-iiith/exp-carbon-di-oxide-iiith/experiment/simulation/js/main.js
+  37:19  warning  'ChemDoodle' is not defined  no-undef
+  44:23  warning  'ChemDoodle' is not defined  no-undef
+  56:14  warning  'Chart' is not defined       no-undef
+
+✖ 3 problems (0 errors, 3 warnings)
+
